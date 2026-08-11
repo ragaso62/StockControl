@@ -1,11 +1,11 @@
 using MySqlConnector;
-//using StockControl.Database;
+using StockControl.Database;
 
 namespace StockControl
 {
-    public partial class Form1 : Form
+    public partial class frmPrincipal : Form
     {
-        public Form1()
+        public frmPrincipal()
         {
             InitializeComponent();
         }
