@@ -10,11 +10,14 @@ using System.Windows.Forms;
 
 namespace StockControl.Models
 {
-    public partial class Produto : Form
+    public class Produto
     {
-        public Produto()
-        {
-            InitializeComponent();
-        }
+        public int Id { get; set; }
+        public string Codigo { get; set; } = string.Empty;
+        public string Nome { get; set; } = string.Empty;
+        public string Marca {  get; set; } = string.Empty;
+        public decimal Preco { get; set; }
+        public int Estoque { get; set;  }
+        public int EstoqueMinimo { get; set; }
     }
 }
