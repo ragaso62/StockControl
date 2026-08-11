@@ -1,6 +1,6 @@
 ﻿namespace StockControl
 {
-    partial class Form1
+    partial class frmPrincipal
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             btnTestarConexao = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // btnTestarConexao
@@ -41,11 +42,22 @@
             btnTestarConexao.UseVisualStyleBackColor = true;
             btnTestarConexao.Click += btnTestarConexao_Click;
             // 
+            // button1
+            // 
+            button1.Location = new Point(570, 296);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 1;
+            button1.Text = "Cadastrar produto";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(716, 403);
+            Controls.Add(button1);
             Controls.Add(btnTestarConexao);
             Name = "Form1";
             Text = "Form1";
@@ -55,5 +67,6 @@
         #endregion
 
         private Button btnTestarConexao;
+        private Button button1;
     }
 }

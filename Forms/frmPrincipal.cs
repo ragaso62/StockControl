@@ -30,7 +30,8 @@ namespace StockControl
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                 }
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 //caso ocorra erro
                 MessageBox.Show(

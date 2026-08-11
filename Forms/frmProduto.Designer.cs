@@ -29,21 +29,28 @@
         private void InitializeComponent()
         {
             grpDadosProdutos = new GroupBox();
+            btnCancelar = new Button();
+            btnSalvar = new Button();
+            btnNovo = new Button();
+            txtEstoqueMinimo = new TextBox();
+            txtPrecoCompra = new TextBox();
+            textMarca = new TextBox();
+            txtNome = new TextBox();
+            txtCodigo = new TextBox();
+            label5 = new Label();
             label1 = new Label();
+            label4 = new Label();
             label2 = new Label();
             label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            txtCodigo = new TextBox();
-            txtNome = new TextBox();
-            textMarca = new TextBox();
-            txtPrecoCompra = new TextBox();
-            txtEstoqueMinimo = new TextBox();
             grpDadosProdutos.SuspendLayout();
             SuspendLayout();
             // 
             // grpDadosProdutos
             // 
+            grpDadosProdutos.BackColor = Color.Thistle;
+            grpDadosProdutos.Controls.Add(btnCancelar);
+            grpDadosProdutos.Controls.Add(btnSalvar);
+            grpDadosProdutos.Controls.Add(btnNovo);
             grpDadosProdutos.Controls.Add(txtEstoqueMinimo);
             grpDadosProdutos.Controls.Add(txtPrecoCompra);
             grpDadosProdutos.Controls.Add(textMarca);
@@ -62,6 +69,77 @@
             grpDadosProdutos.Text = "Dados do Produto";
             grpDadosProdutos.Enter += grpDadosProdutos_Enter;
             // 
+            // btnCancelar
+            // 
+            btnCancelar.Location = new Point(459, 315);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(65, 23);
+            btnCancelar.TabIndex = 13;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // btnSalvar
+            // 
+            btnSalvar.Location = new Point(398, 315);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new Size(55, 23);
+            btnSalvar.TabIndex = 12;
+            btnSalvar.Text = "Salvar";
+            btnSalvar.UseVisualStyleBackColor = true;
+            // 
+            // btnNovo
+            // 
+            btnNovo.Location = new Point(339, 315);
+            btnNovo.Name = "btnNovo";
+            btnNovo.Size = new Size(53, 23);
+            btnNovo.TabIndex = 11;
+            btnNovo.Text = "Novo";
+            btnNovo.UseVisualStyleBackColor = true;
+            // 
+            // txtEstoqueMinimo
+            // 
+            txtEstoqueMinimo.Location = new Point(398, 134);
+            txtEstoqueMinimo.Name = "txtEstoqueMinimo";
+            txtEstoqueMinimo.Size = new Size(126, 25);
+            txtEstoqueMinimo.TabIndex = 10;
+            // 
+            // txtPrecoCompra
+            // 
+            txtPrecoCompra.Location = new Point(133, 131);
+            txtPrecoCompra.Name = "txtPrecoCompra";
+            txtPrecoCompra.Size = new Size(136, 25);
+            txtPrecoCompra.TabIndex = 9;
+            // 
+            // textMarca
+            // 
+            textMarca.Location = new Point(90, 94);
+            textMarca.Name = "textMarca";
+            textMarca.Size = new Size(434, 25);
+            textMarca.TabIndex = 8;
+            // 
+            // txtNome
+            // 
+            txtNome.Location = new Point(90, 63);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(434, 25);
+            txtNome.TabIndex = 7;
+            // 
+            // txtCodigo
+            // 
+            txtCodigo.Location = new Point(90, 32);
+            txtCodigo.Name = "txtCodigo";
+            txtCodigo.Size = new Size(434, 25);
+            txtCodigo.TabIndex = 6;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(290, 134);
+            label5.Name = "label5";
+            label5.Size = new Size(102, 17);
+            label5.TabIndex = 5;
+            label5.Text = "Estoque minimo";
+            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -70,6 +148,15 @@
             label1.Size = new Size(51, 17);
             label1.TabIndex = 1;
             label1.Text = "Codigo";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(16, 131);
+            label4.Name = "label4";
+            label4.Size = new Size(111, 17);
+            label4.TabIndex = 4;
+            label4.Text = "Preço de Compra";
             // 
             // label2
             // 
@@ -89,63 +176,11 @@
             label3.TabIndex = 3;
             label3.Text = "Marca";
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(16, 131);
-            label4.Name = "label4";
-            label4.Size = new Size(111, 17);
-            label4.TabIndex = 4;
-            label4.Text = "Preço de Compra";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(16, 165);
-            label5.Name = "label5";
-            label5.Size = new Size(102, 17);
-            label5.TabIndex = 5;
-            label5.Text = "Estoque minimo";
-            // 
-            // txtCodigo
-            // 
-            txtCodigo.Location = new Point(90, 32);
-            txtCodigo.Name = "txtCodigo";
-            txtCodigo.Size = new Size(100, 25);
-            txtCodigo.TabIndex = 6;
-            // 
-            // txtNome
-            // 
-            txtNome.Location = new Point(90, 63);
-            txtNome.Name = "txtNome";
-            txtNome.Size = new Size(100, 25);
-            txtNome.TabIndex = 7;
-            // 
-            // textMarca
-            // 
-            textMarca.Location = new Point(90, 94);
-            textMarca.Name = "textMarca";
-            textMarca.Size = new Size(100, 25);
-            textMarca.TabIndex = 8;
-            // 
-            // txtPrecoCompra
-            // 
-            txtPrecoCompra.Location = new Point(133, 131);
-            txtPrecoCompra.Name = "txtPrecoCompra";
-            txtPrecoCompra.Size = new Size(100, 25);
-            txtPrecoCompra.TabIndex = 9;
-            // 
-            // txtEstoqueMinimo
-            // 
-            txtEstoqueMinimo.Location = new Point(133, 165);
-            txtEstoqueMinimo.Name = "txtEstoqueMinimo";
-            txtEstoqueMinimo.Size = new Size(100, 25);
-            txtEstoqueMinimo.TabIndex = 10;
-            // 
             // frmProduto
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Purple;
             ClientSize = new Size(800, 510);
             Controls.Add(grpDadosProdutos);
             Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -172,5 +207,8 @@
         private Label label5;
         private Label label4;
         private Label label3;
+        private Button btnCancelar;
+        private Button btnSalvar;
+        private Button btnNovo;
     }
 }
