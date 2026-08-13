@@ -67,7 +67,6 @@
             grpDadosProdutos.TabIndex = 0;
             grpDadosProdutos.TabStop = false;
             grpDadosProdutos.Text = "Dados do Produto";
-            grpDadosProdutos.Enter += grpDadosProdutos_Enter;
             // 
             // btnCancelar
             // 
@@ -86,6 +85,7 @@
             btnSalvar.TabIndex = 12;
             btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // btnNovo
             // 

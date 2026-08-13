@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StockControl.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,10 +17,14 @@ namespace StockControl.Forms
         {
             InitializeComponent();
         }
-
-        private void grpDadosProdutos_Enter(object sender, EventArgs e)
+        private void btnSalvar_Click(object sender, EventArgs e)
         {
+            //criar e preencher o obijeto
+            Produto produto = new Produto();
 
+            produto.Codigo = txtCodigo.Text;
+            produto.Nome = txtNome.Text;
+            produto.Marca = txtMarca.Text;
         }
     }
 }
