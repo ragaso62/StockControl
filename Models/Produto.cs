@@ -18,6 +18,6 @@ namespace StockControl.Models
         public string Marca {  get; set; } = string.Empty;
         public decimal Preco { get; set; }
         public int Estoque { get; set;  }
-        public int EstoqueMinimo { get; set; }
+        public int EstoqueMinimo { get; set; } 
     }
 }

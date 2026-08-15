@@ -16,24 +16,30 @@ namespace StockControl.DAO
         {
             Conexao conexao = new Conexao();
 
-            MySqlConnection conn = conexao.ObterConexao();
-            conn.Open();
 
-            //montar o SQL por concatenação
-            string slq = "INSERT INTO produto (Codigo, Nome, Marca, Preco, Estoque, EstoqueMinimo) VALUE(" +
-                produto.Codigo + "', '"
-                + produto.Nome + "', '"
-                + produto.Marca + "', '"
-                + produto.Preco + "', '"
-                + produto.Estoque + "', '"
-                + produto.EstoqueMinimo + ");";
-            MySqlCommand cmd = new MySqlCommand(slq, conn);
+            //garante que a conexão seja fechada e descartada da memoria automaticamente apos o uso
+            using (MySqlConnection conn = conexao.ObterConexao())
+            {  
+                //abre a conexão ativa com o banco de dados
+                conn.Open();
 
-            cmd.ExecuteNonQuery();
+                //declara a instrução SQL de inserção usando sintaxe @"...", usar parametros (@Nome, @Preco, ...)
+                string sql = @"INSERT INTO Produto (Codigo, Nome, Marca, Preco, Estoque, EstoqueMinimo) VALUES (@Codigo, @Nome, @Marca, @Preco, @Estoque, @EstoqueMinimo);";
 
-            conn.Close();
+                using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+                {
+                    //associar o valor da propriedade 'Codigo' do obijeto ao parametro '@Codigo' SLQ
+                    cmd.Parameters.AddWithValue("@Codigo", produto.Codigo);
+                    cmd.Parameters.AddWithValue("@Nome", produto.Nome);
+                    cmd.Parameters.AddWithValue("@Marca", produto.Marca);
+                    cmd.Parameters.AddWithValue("@Preco", produto.Preco);
+                    cmd.Parameters.AddWithValue("@Estoque", produto.Estoque);
+                    cmd.Parameters.AddWithValue("@EstoqueMinimo", produto.EstoqueMinimo);
 
+                    //executa a instrução SQL no BD (usado para INSERT, UPDARE e DELETE, pois ele não retorna dados)
+                    cmd.ExecuteNonQuery();
+                }
+            }
         }
-
     }
 }

@@ -34,7 +34,7 @@
             btnNovo = new Button();
             txtEstoqueMinimo = new TextBox();
             txtPrecoCompra = new TextBox();
-            textMarca = new TextBox();
+            txtMarca = new TextBox();
             txtNome = new TextBox();
             txtCodigo = new TextBox();
             label5 = new Label();
@@ -53,7 +53,7 @@
             grpDadosProdutos.Controls.Add(btnNovo);
             grpDadosProdutos.Controls.Add(txtEstoqueMinimo);
             grpDadosProdutos.Controls.Add(txtPrecoCompra);
-            grpDadosProdutos.Controls.Add(textMarca);
+            grpDadosProdutos.Controls.Add(txtMarca);
             grpDadosProdutos.Controls.Add(txtNome);
             grpDadosProdutos.Controls.Add(txtCodigo);
             grpDadosProdutos.Controls.Add(label5);
@@ -110,12 +110,12 @@
             txtPrecoCompra.Size = new Size(136, 25);
             txtPrecoCompra.TabIndex = 9;
             // 
-            // textMarca
+            // txtMarca
             // 
-            textMarca.Location = new Point(90, 94);
-            textMarca.Name = "textMarca";
-            textMarca.Size = new Size(434, 25);
-            textMarca.TabIndex = 8;
+            txtMarca.Location = new Point(90, 94);
+            txtMarca.Name = "txtMarca";
+            txtMarca.Size = new Size(434, 25);
+            txtMarca.TabIndex = 8;
             // 
             // txtNome
             // 
@@ -201,7 +201,7 @@
         private Label label2;
         private TextBox txtEstoqueMinimo;
         private TextBox txtPrecoCompra;
-        private TextBox textMarca;
+        private TextBox txtMarca;
         private TextBox txtNome;
         private TextBox txtCodigo;
         private Label label5;

@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <Folder Include="Database\ScriptSQL\" />
-    <Folder Include="DAO\" />
     <Folder Include="Resources\" />
   </ItemGroup>
 
