@@ -1,5 +1,6 @@
 using MySqlConnector;
 using StockControl.Database;
+using StockControl.Forms;
 
 namespace StockControl
 {
@@ -37,6 +38,15 @@ namespace StockControl
                 MessageBox.Show(
                     "Erro ao conectar." + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnCadastrarProduto_Click(object sender, EventArgs e)
+        {
+            //instanciar o formulario cadastrar produto
+            frmProduto telaProduto = new frmProduto();
+
+            //exibe o formulario
+            telaProduto.ShowDialog();
         }
     }
 }

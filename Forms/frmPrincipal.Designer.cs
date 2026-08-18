@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             btnTestarConexao = new Button();
-            button1 = new Button();
+            btnCadastrarProduto = new Button();
             SuspendLayout();
             // 
             // btnTestarConexao
@@ -42,23 +42,24 @@
             btnTestarConexao.UseVisualStyleBackColor = true;
             btnTestarConexao.Click += btnTestarConexao_Click;
             // 
-            // button1
+            // btnCadastrarProduto
             // 
-            button1.Location = new Point(570, 296);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 1;
-            button1.Text = "Cadastrar produto";
-            button1.UseVisualStyleBackColor = true;
+            btnCadastrarProduto.Location = new Point(209, 75);
+            btnCadastrarProduto.Name = "btnCadastrarProduto";
+            btnCadastrarProduto.Size = new Size(160, 23);
+            btnCadastrarProduto.TabIndex = 1;
+            btnCadastrarProduto.Text = "Cadastrar produto";
+            btnCadastrarProduto.UseVisualStyleBackColor = true;
+            btnCadastrarProduto.Click += btnCadastrarProduto_Click;
             // 
-            // Form1
+            // frmPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(716, 403);
-            Controls.Add(button1);
+            Controls.Add(btnCadastrarProduto);
             Controls.Add(btnTestarConexao);
-            Name = "Form1";
+            Name = "frmPrincipal";
             Text = "Form1";
             ResumeLayout(false);
         }
@@ -66,6 +67,6 @@
         #endregion
 
         private Button btnTestarConexao;
-        private Button button1;
+        private Button btnCadastrarProduto;
     }
 }
