@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,6 +39,7 @@ namespace StockControl.Forms
                 dao.Salvar(produto);
 
                 MessageBox.Show("Produto cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LimparCampos();
             }
             //captura erros de formatação
             catch (FormatException)
@@ -46,12 +48,23 @@ namespace StockControl.Forms
                 MessageBox.Show("Preencha os campos de preço 3 estoque apenas com numeros", "Erro de digitação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 //Exibir mensagem de erro gerado pelo sistema
                 MessageBox.Show("Erro ao salvar no banco: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+        }
+        //metodo responsavel por limpar a caixa de texto do formulario e reposicionar o cursor para o proximo cadastro
+        private void LimparCampos()
+        {
+            txtCodigo.Clear();
+            txtEstoqueMinimo.Clear();
+            txtMarca.Clear();
+            txtNome.Clear();
+            txtPrecoCompra.Clear();
+            
+            //o metodo .focus() coloca o cursor na caixa principal
+            txtCodigo.Focus();
         }
     }
 }

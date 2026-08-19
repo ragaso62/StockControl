@@ -46,7 +46,7 @@ namespace StockControl
             frmProduto telaProduto = new frmProduto();
 
             //exibe o formulario
-            telaProduto.ShowDialog();
+            telaProduto.ShowDialog(); 
         }
     }
 }
