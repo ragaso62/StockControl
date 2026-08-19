@@ -95,6 +95,7 @@
             btnNovo.TabIndex = 11;
             btnNovo.Text = "Novo";
             btnNovo.UseVisualStyleBackColor = true;
+            btnNovo.Click += btnNovo_Click;
             // 
             // txtEstoqueMinimo
             // 

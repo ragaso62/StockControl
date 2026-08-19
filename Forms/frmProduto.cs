@@ -62,9 +62,14 @@ namespace StockControl.Forms
             txtMarca.Clear();
             txtNome.Clear();
             txtPrecoCompra.Clear();
-            
+
             //o metodo .focus() coloca o cursor na caixa principal
             txtCodigo.Focus();
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
         }
     }
 }
