@@ -71,5 +71,10 @@ namespace StockControl.Forms
         {
             LimparCampos();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
