@@ -41,5 +41,43 @@ namespace StockControl.DAO
                 }
             }
         }
+         //consulta o banco de dados e retorna uma lista com todos os produtos cadastrados
+         public List<Produto> Listar()
+        {
+            //cria uma lista vazia para armazenar todos os produtos
+            List<Produto> lista = new List<Produto>();
+
+            Conexao conexao = new Conexao();
+            using (MySqlConnection conn = conexao.ObterConexao())
+            {
+                conn.Open();
+                string sql = "SELECT Id, Codigo, Nome, Marca, Preco, Estoque, EstoqueMinimo FROM Produto ORDER BY Nome;";
+                
+                using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+                {
+                    //execute Reader() executa o SELECT e retorna um leitor de dados (reader)
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        //enquanto ouver linhas para aver no banco
+                        while (reader.Read())
+                        {
+                            Produto produto = new Produto();
+                            produto.Id = Convert.ToInt32(reader["Id"]);
+                            produto.Codigo = reader["Codigo"].ToString()!;
+                            produto.Nome = reader["Nome"].ToString()!;
+                            produto.Marca = reader["Marca"].ToString()!;
+                            produto.Preco = Convert.ToDecimal(reader["Preco"]);
+                            produto.Estoque = Convert.ToInt32(reader["Estoque"]);
+                            produto.EstoqueMinimo = Convert.ToInt32(reader["EstoqueMinimo"]);
+
+                            //adicionar produto na lista
+                            lista.Add(produto);
+                        }
+                    }
+                }
+            }
+            //retorna a lista preenchida
+            return lista;
+        }
     }
 }
